@@ -73,3 +73,26 @@ body {
 .non_select {
     user-select: none;
 }
+
+.newCoockie {
+    animation-duration: 3s;
+    animation-name: moveUpToDown;
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background-size:cover;
+    background-image: url(/images/images-removebg-preview.png);
+   
+}
+
+@keyframes moveUpToDown {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: 1000px;
+      }
+      
+}
+
