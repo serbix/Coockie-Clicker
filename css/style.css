@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/* main text font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+/* second font*/
 
 body {
     margin: 0px;
@@ -19,6 +22,25 @@ body {
     background-color: rgb(235, 223, 155);
     -webkit-box-shadow: 10px 2px 10px -3px rgba(0, 0, 0, 0.58);
     box-shadow: 10px 2px 10px -3px rgba(0, 0, 0, 0.58);
+}
+
+#upgradeList {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    list-style-type: none;
+    user-select: none;
+}
+
+li ul:hover {
+    transition: 0.15s;
+    transform: scale(1.1);
+}
+
+.upgradeListClass {
+    display: flex;
 }
 
 #left_menu_header_text {
@@ -81,18 +103,41 @@ body {
     top: 0;
     height: 50px;
     width: 50px;
-    background-size:cover;
+    background-size: cover;
     background-image: url(/images/images-removebg-preview.png);
-   
+
 }
+
+.errorMessage {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    height: 90px;
+    width: 230px;
+    background-color: #ffa600;
+    border: 1px solid #996300;
+    border-radius: 20px;
+    opacity: 90%;
+    -webkit-box-shadow: 5px 4px 15px -4px rgba(0, 0, 0, 0.74);
+    box-shadow: 5px 4px 15px -4px rgba(0, 0, 0, 0.74);
+    animation-name: Emersion;
+    animation-duration: 3s;
+}
+
 
 @keyframes moveUpToDown {
     from {
         margin-top: 0px;
     }
+
     to {
         margin-top: 600px;
-      }
-      
+    }
+
 }
 
+@keyframes Emersion {
+   0% {opacity: 0;}
+   50% { opacity: 1;}
+   100% {opacity: 0;}
+}
