@@ -15,8 +15,8 @@ function coockieDropAniation() {
     let newCoockieElement = document.createElement('div');
     newCoockieElement.style.right = getRandomInt(2000) + "px";
     newCoockieElement.className = "newCoockie";
-    newCoockieElement.id = "tempCoockie"
     document.body.append(newCoockieElement);
+    newCoockieElement.addEventListener("animationend" ,newCoockieElement.remove);
 }
 
 function coockieClick() {
@@ -26,9 +26,7 @@ function coockieClick() {
 
 }
 
-function coockieAnimationDropCheck() {
-    let elem = document.getElementById('tempCoockie');
-    elem.addEventListener("transitionend" , elem.remove());
-}
+
+
 
 mainCoockieObj.onclick = coockieClick; // Coockie click function call 
